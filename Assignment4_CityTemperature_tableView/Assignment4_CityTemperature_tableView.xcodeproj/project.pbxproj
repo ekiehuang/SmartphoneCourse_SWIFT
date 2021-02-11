@@ -13,6 +13,8 @@
 		670C538325D5E965008681AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670C538225D5E965008681AE /* Assets.xcassets */; };
 		670C538625D5E965008681AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 670C538425D5E965008681AE /* LaunchScreen.storyboard */; };
 		670C539025D5E9BA008681AE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C538F25D5E9BA008681AE /* TableViewController.swift */; };
+		670C539525D5EA48008681AE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670C539325D5EA48008681AE /* TableViewCell.swift */; };
+		670C539625D5EA48008681AE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 670C539425D5EA48008681AE /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		670C538525D5E965008681AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		670C538725D5E965008681AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		670C538F25D5E9BA008681AE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		670C539325D5EA48008681AE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		670C539425D5EA48008681AE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				670C538425D5E965008681AE /* LaunchScreen.storyboard */,
 				670C538725D5E965008681AE /* Info.plist */,
 				670C538F25D5E9BA008681AE /* TableViewController.swift */,
+				670C539325D5EA48008681AE /* TableViewCell.swift */,
+				670C539425D5EA48008681AE /* TableViewCell.xib */,
 			);
 			path = Assignment4_CityTemperature_tableView;
 			sourceTree = "<group>";
@@ -125,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				670C538625D5E965008681AE /* LaunchScreen.storyboard in Resources */,
+				670C539625D5EA48008681AE /* TableViewCell.xib in Resources */,
 				670C538325D5E965008681AE /* Assets.xcassets in Resources */,
 				670C538125D5E963008681AE /* Main.storyboard in Resources */,
 			);
@@ -138,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				670C537A25D5E963008681AE /* AppDelegate.swift in Sources */,
+				670C539525D5EA48008681AE /* TableViewCell.swift in Sources */,
 				670C539025D5E9BA008681AE /* TableViewController.swift in Sources */,
 				670C537C25D5E963008681AE /* SceneDelegate.swift in Sources */,
 			);

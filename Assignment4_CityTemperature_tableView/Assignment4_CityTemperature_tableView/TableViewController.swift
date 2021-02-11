@@ -25,9 +25,10 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
         
-        cell.textLabel?.text = cities[indexPath.row]
+        cell.lblCity.text = cities[indexPath.row]
+        cell.lblTem.text = temperature[indexPath.row]
 
         return cell
     }
