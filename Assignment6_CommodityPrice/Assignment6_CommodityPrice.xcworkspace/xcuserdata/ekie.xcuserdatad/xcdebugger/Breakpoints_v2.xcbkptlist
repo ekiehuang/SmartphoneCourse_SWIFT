@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8B6486D8-AF1D-4EA9-9C3F-B11C5036A8BD"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64B70C8A-165C-4421-A944-2736EE8F4CB9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment6_CommodityPrice/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "getQuickShortQuote(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64B70C8A-165C-4421-A944-2736EE8F4CB9 - e820d1574a87f404"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;Assignment6_CommodityPrice.Commodity&gt;&gt;) -&gt; () in Assignment6_CommodityPrice.TableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;Assignment6_CommodityPrice.Commodity&gt;&gt;"
+                  moduleName = "Assignment6_CommodityPrice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekie/NEU/Courses/SmartPhone/SmartphoneCourse_SWIFT/Assignment6_CommodityPrice/Assignment6_CommodityPrice/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "64B70C8A-165C-4421-A944-2736EE8F4CB9 - 9f131374d18a4624"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any, Alamofire.AFError&gt;) -&gt; () in closure #1 (PromiseKit.Resolver&lt;Swift.Array&lt;Assignment6_CommodityPrice.Commodity&gt;&gt;) -&gt; () in Assignment6_CommodityPrice.TableViewController.getQuickShortQuote(Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;Assignment6_CommodityPrice.Commodity&gt;&gt;"
+                  moduleName = "Assignment6_CommodityPrice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekie/NEU/Courses/SmartPhone/SmartphoneCourse_SWIFT/Assignment6_CommodityPrice/Assignment6_CommodityPrice/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "305">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88938251-F5D8-4994-A671-31374C4D4EF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment6_CommodityPrice/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD39DB5F-2AE3-4F15-8B12-C1D67C5B4A69"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment6_CommodityPrice/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D634D20D-679E-4C62-A599-C0F71032FA10"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment6_CommodityPrice/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "getData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D634D20D-679E-4C62-A599-C0F71032FA10 - f14811cab3a9327c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Assignment6_CommodityPrice.TableViewController.getData() -&gt; ()"
+                  moduleName = "Assignment6_CommodityPrice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekie/NEU/Courses/SmartPhone/SmartphoneCourse_SWIFT/Assignment6_CommodityPrice/Assignment6_CommodityPrice/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "441">
+               </Location>
+               <Location
+                  uuid = "D634D20D-679E-4C62-A599-C0F71032FA10 - d64cef7cab80580d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Assignment6_CommodityPrice.Commodity&gt;) -&gt; () in Assignment6_CommodityPrice.TableViewController.getData() -&gt; ()"
+                  moduleName = "Assignment6_CommodityPrice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekie/NEU/Courses/SmartPhone/SmartphoneCourse_SWIFT/Assignment6_CommodityPrice/Assignment6_CommodityPrice/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "770">
+               </Location>
+               <Location
+                  uuid = "D634D20D-679E-4C62-A599-C0F71032FA10 - 82b4c2135058ec35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Error) -&gt; () in Assignment6_CommodityPrice.TableViewController.getData() -&gt; ()"
+                  moduleName = "Assignment6_CommodityPrice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ekie/NEU/Courses/SmartPhone/SmartphoneCourse_SWIFT/Assignment6_CommodityPrice/Assignment6_CommodityPrice/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15EFB342-3ACC-4937-97FA-B8237A505CAA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment6_CommodityPrice/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "getQuickShortQuote(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
