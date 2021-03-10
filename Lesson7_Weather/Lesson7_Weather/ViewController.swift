@@ -17,7 +17,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
     var futureDaysArr : [FutureWeather] = [FutureWeather]()
     
     @IBOutlet weak var lblCity: UILabel!
-    
     @IBOutlet weak var lblCond: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     
