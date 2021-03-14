@@ -7,4 +7,4 @@ This is all the materials of Smartphone Course
 
 [Link to Assignment6(price of commodity)](https://github.com/ekiehuang/SmartphoneCourse_SWIFT/tree/main/Assignment6_CommodityPrice)
 
-[Link to Assignment7(forecast weather)](https://github.com/ekiehuang/SmartphoneCourse_SWIFT/tree/main/Lesson7_Weather)
+[Link to Assignment8+7(forecast weather)](https://github.com/ekiehuang/SmartphoneCourse_SWIFT/tree/main/Lesson7_Weather)
