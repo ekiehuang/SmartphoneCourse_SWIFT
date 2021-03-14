@@ -15,14 +15,21 @@ import PromiseKit
 class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var futureDaysArr : [FutureWeather] = [FutureWeather]()
+    let imageArr = ["01-s","02-s","03-s","04-s","05-s","06-s","07-s", "08-s","09-s","10-s","11-s","12-s","13-s","14-s","15-s","16-s","17-s","18-s","19-s","20-s","21-s","22-s","23-s","24-s","25-s","26-s","27-s","28-s","29-s","30-s","31-s","32-s","33-s","34-s","35-s","36-s","37-s","38-s","39-s","40-s","41-s","42-s","43-s","44-s"]
     
     @IBOutlet weak var lblCity: UILabel!
     @IBOutlet weak var lblCond: UILabel!
     @IBOutlet weak var lblTemp: UILabel!
     
-    @IBOutlet weak var lblHighLow: UILabel!
+    @IBOutlet weak var lblHigh: UILabel!
+    @IBOutlet weak var lblLow: UILabel!
+    
+    @IBOutlet weak var highImage: UIImageView!
+    @IBOutlet weak var lowImage: UIImageView!
     
     @IBOutlet weak var tblForecast: UITableView!
+    
+    @IBOutlet weak var lblCurWeatherIcon: UIImageView!
     
     
     let locationManager = CLLocationManager()
@@ -49,8 +56,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
         }
     }
     
-    func updateWeatherData(_ url: String) -> Promise<(String, Int)>{
-        return Promise<(String, Int)>{ seal -> Void in
+    func updateWeatherData(_ url: String) -> Promise<(String, Int, Int)>{
+        return Promise<(String, Int, Int)>{ seal -> Void in
             AF.request(url).responseJSON { (response) in
                 if response.error != nil{
                     seal.reject(response.error!)
@@ -59,14 +66,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
                 
                 let condition = currentWeatherJSON[0]["WeatherText"].stringValue
                 let temp = currentWeatherJSON[0]["Temperature"]["Imperial"]["Value"].intValue
+                let weatherIcon = currentWeatherJSON[0]["WeatherIcon"].intValue
                 
-                seal.fulfill((condition, temp))
+                seal.fulfill((condition, temp, weatherIcon))
         }
     }
     }
     
-    func getOneDayCondition(_ url: String) -> Promise<(Int, Int)>{
-        return Promise<(Int, Int)> {seal -> Void in
+    func getOneDayCondition(_ url: String) -> Promise<(Int, Int, Int, Int)>{
+        return Promise<(Int, Int, Int, Int)> {seal -> Void in
             AF.request(url).responseJSON { (response) in
                 if response.error != nil{
                     seal.reject(response.error!)
@@ -75,8 +83,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDe
                 
                 let high = oneDayJSON["DailyForecasts"][0]["Temperature"]["Maximum"]["Value"].intValue
                 let low = oneDayJSON["DailyForecasts"][0]["Temperature"]["Minimum"]["Value"].intValue
-               
-                seal.fulfill((high, low))
+                let dayIcon = oneDayJSON["DailyForecasts"][0]["Day"]["Icon"].intValue
+                let nightIcon = oneDayJSON["DailyForecasts"][0]["Night"]["Icon"].intValue
+                
+                seal.fulfill((high, low, dayIcon, nightIcon))
         }
         }
     }
@@ -95,9 +105,11 @@ extension ViewController{
                 let currentUrl = self.getCurrentUrl(key)
                 
                 self.updateWeatherData(currentUrl)
-                    .done { (currCondition, temp) in
+                    .done { (currCondition, temp, weatherIcon) in
                         self.lblCond.text = currCondition
                         self.lblTemp.text = "\(temp)º"
+                        self.lblCurWeatherIcon.image = UIImage(named: self.imageArr[weatherIcon-1])
+                        print(weatherIcon)
                     }
                     .catch { (error) in
                         print(error.localizedDescription)
@@ -105,8 +117,11 @@ extension ViewController{
                 //get the high and low temperature
                 let oneDayUrl = self.getOneDayUrl(key)
                 self.getOneDayCondition(oneDayUrl)
-                    .done { (high, low) in
-                        self.lblHighLow.text = "H:\(high)º, L:\(low)º"
+                    .done { (high, low, dayIcon, nightIcon) in
+                        self.lblHigh.text = "H:\(high)º"
+                        self.lblLow.text = "L:\(low)º"
+                        self.highImage.image = UIImage(named: self.imageArr[dayIcon-1])
+                        self.lowImage.image = UIImage(named: self.imageArr[nightIcon-1])
                     }
                     .catch { (error) in
                         print(error.localizedDescription)
@@ -213,8 +228,10 @@ extension ViewController{
                     
                     let high = day["Temperature"]["Maximum"]["Value"].intValue
                     let low = day["Temperature"]["Minimum"]["Value"].intValue
+                    let highIcon = day["Day"]["Icon"].intValue
+                    let lowIcon = day["Night"]["Icon"].intValue
                     
-                    let day = FutureWeather(date: weekDay, high: high, low: low)
+                    let day = FutureWeather(date: weekDay, high: high, low: low, highIcon: highIcon, lowIcon: lowIcon)
                     arr.append(day)
                 }
                 seal.fulfill(arr)
@@ -238,8 +255,13 @@ extension ViewController{
 
         let futureHigh = self.futureDaysArr[indexPath.row].high
         let futureLow = self.futureDaysArr[indexPath.row].low
+        let futureHighIcon = self.futureDaysArr[indexPath.row].highIcon
+        let futureLowIcon = self.futureDaysArr[indexPath.row].lowIcon
 
-        cell.lblFutureTemp.text = "High:\(futureHigh)º, Low:\(futureLow)º"
+        cell.lblCellHigh.text = "H:\(futureHigh)º"
+        cell.imageCellHigh.image = UIImage(named: self.imageArr[futureHighIcon-1])
+        cell.imageCellLow.image = UIImage(named: self.imageArr[futureLowIcon-1])
+        cell.lblCellLow.text = "L:\(futureLow)º"
 
         return cell
     }

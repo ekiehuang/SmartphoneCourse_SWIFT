@@ -9,40 +9,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Lesson7_Weather" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="54" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="Lesson7_Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="54"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="460" height="54"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Day of Week" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-DK-eIA">
-                        <rect key="frame" x="15" y="12" width="150" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DayOfWeek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-DK-eIA">
+                        <rect key="frame" x="20" y="10" width="100" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="wWP-D0-i4y"/>
+                            <constraint firstAttribute="width" constant="100" id="wWP-D0-i4y"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="High: --º, Low: --º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wb-bD-0S1">
-                        <rect key="frame" x="170" y="12" width="137" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="H: --º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wb-bD-0S1">
+                        <rect key="frame" x="135" y="10" width="43" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L: --º" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pE0-cZ-0Kb">
+                        <rect key="frame" x="243" y="10" width="40.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M86-y6-tdw">
+                        <rect key="frame" x="178" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="FND-X1-jqH"/>
+                            <constraint firstAttribute="width" constant="40" id="NHU-JZ-38I"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DoO-sD-Jac">
+                        <rect key="frame" x="283.5" y="2" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="BNn-x5-Rdc"/>
+                            <constraint firstAttribute="height" constant="40" id="CwU-MN-WFD"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="RAF-DK-eIA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="OLl-Z7-qDE"/>
-                    <constraint firstItem="9wb-bD-0S1" firstAttribute="leading" secondItem="RAF-DK-eIA" secondAttribute="trailing" constant="5" id="oq1-NV-7yN"/>
+                    <constraint firstItem="M86-y6-tdw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="0yS-z3-wGE"/>
+                    <constraint firstItem="DoO-sD-Jac" firstAttribute="leading" secondItem="pE0-cZ-0Kb" secondAttribute="trailing" id="2Jc-yz-AQQ"/>
+                    <constraint firstItem="RAF-DK-eIA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6C8-hz-LEq"/>
+                    <constraint firstItem="RAF-DK-eIA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="B60-dj-mFo"/>
+                    <constraint firstItem="pE0-cZ-0Kb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="GMR-hL-BS8"/>
+                    <constraint firstItem="pE0-cZ-0Kb" firstAttribute="leading" secondItem="M86-y6-tdw" secondAttribute="trailing" constant="25" id="cur-kS-98J"/>
+                    <constraint firstItem="M86-y6-tdw" firstAttribute="leading" secondItem="9wb-bD-0S1" secondAttribute="trailing" id="k41-jR-Pbe"/>
+                    <constraint firstItem="9wb-bD-0S1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="nao-0a-ORX"/>
+                    <constraint firstItem="9wb-bD-0S1" firstAttribute="leading" secondItem="RAF-DK-eIA" secondAttribute="trailing" constant="15" id="tmd-Cj-Ggk"/>
+                    <constraint firstItem="DoO-sD-Jac" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="ukh-V0-bTI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imageCellHigh" destination="M86-y6-tdw" id="Fpj-GX-S1P"/>
+                <outlet property="imageCellLow" destination="DoO-sD-Jac" id="vfr-g7-AOF"/>
+                <outlet property="lblCellHigh" destination="9wb-bD-0S1" id="YTh-UL-bOO"/>
+                <outlet property="lblCellLow" destination="pE0-cZ-0Kb" id="3Cq-5L-13V"/>
                 <outlet property="lblDayWeek" destination="RAF-DK-eIA" id="BZW-aN-ZQ0"/>
-                <outlet property="lblFutureTemp" destination="9wb-bD-0S1" id="YTh-UL-bOO"/>
             </connections>
-            <point key="canvasLocation" x="35" y="85"/>
+            <point key="canvasLocation" x="136.23188405797103" y="87.723214285714278"/>
         </tableViewCell>
     </objects>
 </document>
